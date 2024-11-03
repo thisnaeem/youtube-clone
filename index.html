@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern YouTube Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="logo-container">
+            <div class="menu-icon" id="menuToggle">☰</div>
+            <div class="logo">
+                <span class="logo-text">YouTube Clone</span>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-box-wrapper">
+                <input type="text" class="search-box" placeholder="Search">
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+            <button class="search-btn">🔍</button>
+            <button class="voice-search-btn">🎤</button>
+        </div>
+        <div class="user-actions">
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <div class="create-video">📹</div>
+            <div class="notifications">
+                🔔
+                <span class="notification-badge">3</span>
+            </div>
+            <div class="user-profile">👤</div>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-item active">
+                <div>🏠</div>
+                <span class="sidebar-text">Home</span>
+            </div>
+            <div class="sidebar-item">
+                <div>🎯</div>
+                <span class="sidebar-text">Shorts</span>
+            </div>
+            <div class="sidebar-item">
+                <div>📦</div>
+                <span class="sidebar-text">Subscriptions</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-heading">Library</h3>
+            <div class="sidebar-item">
+                <div>📚</div>
+                <span class="sidebar-text">Library</span>
+            </div>
+            <div class="sidebar-item">
+                <div>⏱️</div>
+                <span class="sidebar-text">History</span>
+            </div>
+            <div class="sidebar-item">
+                <div>⏯️</div>
+                <span class="sidebar-text">Your Videos</span>
+            </div>
+            <div class="sidebar-item">
+                <div>⏰</div>
+                <span class="sidebar-text">Watch Later</span>
+            </div>
+            <div class="sidebar-item">
+                <div>👍</div>
+                <span class="sidebar-text">Liked Videos</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-heading">Subscriptions</h3>
+            <div class="subscribed-channels" id="subscribedChannels">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="categories-bar" id="categoriesBar">
+            <!-- Dynamically populated -->
+        </div>
+
+        <div class="video-grid" id="videoGrid">
+            <!-- Dynamically populated -->
+        </div>
+
+        <div class="load-more">
+            <button id="loadMoreBtn">Load More</button>
+        </div>
+    </main>
+
+    <div class="video-player-modal" id="videoPlayerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="video-container">
+                <div class="video-placeholder"></div>
+            </div>
+            <div class="video-info-container">
+                <h2 class="modal-video-title"></h2>
+                <div class="video-stats">
+                    <div class="channel-info">
+                        <div class="channel-avatar"></div>
+                        <div class="channel-details">
+                            <h3 class="channel-name"></h3>
+                            <span class="subscriber-count"></span>
+                        </div>
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                    <div class="video-actions">
+                        <button class="like-btn">👍 <span>0</span></button>
+                        <button class="dislike-btn">👎 <span>0</span></button>
+                        <button class="share-btn">Share</button>
+                        <button class="save-btn">Save</button>
+                    </div>
+                </div>
+                <div class="video-description"></div>
+                <div class="comments-section">
+                    <h3>Comments</h3>
+                    <div class="comments-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
